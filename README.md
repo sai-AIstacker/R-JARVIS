@@ -55,3 +55,8 @@ Created with ❤️ by Rudra Narayan
 Inspired by Tony Stark’s JARVIS from Marvel’s Iron Man
 
 
+Let’s bring Rudra Narayan’s AI assistant to life! 🚀
+
+---
+
+If you want, share your GitHub and LinkedIn URLs, and I’ll add them exactly!
