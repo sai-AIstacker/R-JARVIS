@@ -41,9 +41,17 @@ Talk to R-JARVIS with your microphone, ask questions, and get instant, natural v
 ```bash
 pip install -r requirements.txt/
 
-
-
+``` 
 
 🎙️ Run R-JARVIS
 
 python voice_jarvis.py
+
+🛑 How to Exit
+Simply say “exit”, “stop”, or “quit” to end the assistant session.
+
+🙌 Credits
+Created with ❤️ by Rudra Narayan
+Inspired by Tony Stark’s JARVIS from Marvel’s Iron Man
+
+
