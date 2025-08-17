@@ -1,5 +1,16 @@
 R-JARVIS/
-│
-├── README.md
-├── requirements.txt
-└── voice_jarvis.py
+│── agent.py # Main control file, core Jarvis loop
+│── jarvis_animation.py # Animation/visual feedback for Jarvis
+│── Jarvis_file_opner.py # File opener tool (open apps, documents, etc.)
+│── jarvis_get_whether.py # Weather information fetcher
+│── Jarvis_google_search.py # Google search integration
+│── Jarvis_prompts.py # Predefined prompts, dialogues, or responses
+│── Jarvis_window_CTRL.py # Window management (switch, resize, close)
+│── keyboard_mouse_CTRL.py # Keyboard and mouse automation
+│── object_detection.py # Object detection using AI/ML (camera vision)
+│── volume_tool.py # Volume control utility
+│── whatsapp_tool.py # WhatsApp automation
+│── youtube_tool.py # YouTube automation (play/search videos)
+│── requirements.txt # Project dependencies
+│── .env # Environment variables (API keys, configs)
+│── pycache/ # Python cache (auto-generated)
