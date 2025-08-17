@@ -64,11 +64,11 @@ R-JARVIS/
 - **OS:** Windows / Linux / macOS  
 
 ### 🔧 Installation
-
+```bash
 Clone the repository and create a virtual environment:
 # Create virtual environment
 python -m venv venv
-
+```
 # Activate virtual environment
 source venv/bin/activate
 
@@ -80,17 +80,6 @@ export WEATHER_LOCATION_DEFAULT="New York"
 export GOOGLE_API_KEY="your_api_key_here"
 export GOOGLE_CSE_ID="your_cse_id_here"
 
-# 💬 WhatsApp (Twilio / WA Business API)
-export WHATSAPP_API_KEY="your_api_key_here"
-export WHATSAPP_SENDER="+1234567890"
-
-# 📺 YouTube Data API
-export YOUTUBE_API_KEY="your_api_key_here"
-
-# ⚙️ General Settings
-export LANGUAGE="en"
-export WAKE_WORD="jarvis"
-` 
 
 ▶️ Usage
 Run the main controller:
