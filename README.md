@@ -87,7 +87,8 @@ YOUTUBE_API_KEY=your_api_key_here
 
 # ⚙️ General Settings
 LANGUAGE=en
-WAKE_WORD=jarvis ```
+WAKE_WORD=jarvis
+```bash
 
 ▶️ Usage
 Run the main controller:
