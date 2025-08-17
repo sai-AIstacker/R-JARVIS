@@ -70,21 +70,27 @@ Clone the repository and create a virtual environment:
 python -m venv venv
 ```
 # Activate virtual environment
+```bash
 source venv/bin/activate
+```
 
 # 🌦️ Weather API (OpenWeather, WeatherAPI, etc.)
+```bash
 export WEATHER_API_KEY="your_api_key_here"
 export WEATHER_LOCATION_DEFAULT="New York"
+```
 
 # 🔍 Google Programmable Search
+```bash
 export GOOGLE_API_KEY="your_api_key_here"
 export GOOGLE_CSE_ID="your_cse_id_here"
-
+```
 
 ▶️ Usage
 Run the main controller:
-python agent.py
-
+```bash
+python agent.py console
+```
 Once started, R-JARVIS will:
 
 🎙️ Listen for the wake word (jarvis by default)
