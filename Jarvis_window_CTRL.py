@@ -9,6 +9,40 @@ import ctypes
 import subprocess
 import time
 from datetime import datetime
+import subprocess
+
+def open(app_name: str):
+    """
+    Open a Windows application by name.
+    Example: open("notepad"), open("calc")
+    """
+    try:
+        subprocess.Popen(app_name, shell=True)
+        print(f"[+] Opening {app_name}...")
+    except Exception as e:
+        print(f"[x] Error opening {app_name}: {e}")
+
+def close(app_name: str):
+    """
+    Close an application by process name.
+    Example: close("notepad"), close("calc")
+    """
+    try:
+        os.system(f"taskkill /f /im {app_name}.exe")
+        print(f"[+] Closed {app_name}")
+    except Exception as e:
+        print(f"[x] Error closing {app_name}: {e}")
+
+def folder_file(path: str):
+    """
+    Open a folder or file from its path.
+    Example: folder_file(r'C:\\Users\\YourName\\Documents')
+    """
+    try:
+        os.startfile(path)
+        print(f"[+] Opened {path}")
+    except Exception as e:
+        print(f"[x] Error opening {path}: {e}")
 
 IS_WIN = os.name == "nt"
 if not IS_WIN:
@@ -473,6 +507,3 @@ def main():
             break
         except Exception as e:
             err(f"Unhandled error: {e}")
-
-if __name__ == "__main__":
-    main()
