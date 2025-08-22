@@ -13,7 +13,7 @@ from livekit.plugins import (
 from Jarvis_prompts import behavior_prompts, Reply_prompts
 from Jarvis_google_search import google_search, get_current_datetime
 from jarvis_get_whether import get_weather
-from Jarvis_window_CTRL import open, close, folder_file
+from Jarvis_window_CTRL import open, close, folder_file, main
 from Jarvis_file_opner import Play_file
 from keyboard_mouse_CTRL import (
     move_cursor_tool, mouse_click_tool, scroll_cursor_tool, type_text_tool,
@@ -85,12 +85,35 @@ async def entrypoint(ctx: agents.JobContext):
         instructions=Reply_prompts
     )
 
-if __name__ == "__main__":
-    # Animation window को auto-launch करें (jarvis_animation.py)
-    try:
-        subprocess.Popen([sys.executable, "jarvis_animation.py"])
-    except Exception as e:
-        print("Animation window launch error:", e)
+import os
+def cmd_process():
+    choice = input("1 for cmd process 2 for file operations")
+    if(choice == "1"):
+        main()
+    elif(choice == "2"):
+        ch = input("if to open app enter 'open app' appname")
+        if("open app" in ch):
+            app_name = ch.split("open app", 1)[1].strip()
+            open(app_name)
+        elif("close app" in ch):
+            app_name = ch.split("close app", 1)[1].strip()
+            close(app_name)
+        elif("folder" in ch):
+            folder_name = ch.split("folder", 1)[1].strip()
+            folder_file(folder_name)
 
-    agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
-        # webcam को बंद करें।
+if __name__ == "__main__":
+
+    option = input("What do you want to do with R-Jarvis? press 1)Animation 2)Windows Process 3)Object Detection")
+    if "1" in option:
+        # Animation window को auto-launch करें (jarvis_animation.py)
+        try:
+            subprocess.Popen([sys.executable, "jarvis_animation.py"])
+        except Exception as e:
+            print("Animation window launch error:", e)
+        agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
+            # webcam को बंद करें।
+    elif "2" in option:
+        cmd_process()
+    elif "3" in option:
+        live_object_detection()
