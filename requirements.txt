@@ -1,5 +1,10 @@
 openai
+google
 SpeechRecognition
 pyttsx3
 pyaudio
-
+pillow
+livekit-plugins-google
+livekit-plugins-turn-detector
+livekit-plugins-noise-cancellation
+pywhatkit
